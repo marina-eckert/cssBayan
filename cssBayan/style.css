@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    scroll-behavior: smooth;
+    background-color: #f1dcc9;
+    color: #42313a;
+}
+
+.page {
+    margin: 0 auto;
+}
+
+.header {
+    padding: 0.5em;
+}
+
+.accordion-item {
+    border: 1px solid #9f4636;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.accordion-title {
+    display: block;
+    padding: 0.1em 0.5em;
+
+    cursor: pointer;
+
+    transition: background-color .2s ease-in-out;
+}
+
+.accordion-title:hover {
+    color: #9f4636;
+}
+
+.accordion-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+
+    position: absolute;
+}
+
+.accordion-input:checked ~ .content {
+    display: block;
+}
+
+.accordion-input:hover ~ .content {
+    display: block;
+    -webkit-animation:fade ease-in-out 1s;
+    -moz-animation:fade ease-in-out 1s;
+    animation:fade ease-in-out 1s;
+}
+
+.accordion-input:checked ~ .accordion-title{
+    color: #9f4636;
+}
+
+.content {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0.1em 0.5em;
+    display: none;
+}
+
+@-moz-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+
+@media screen and (max-width: 1920px) {
+    .page {
+      width: 50%;
+    }
+    .h2 {
+      font-size: 1.4em;
+    }
+    .h1 {
+      font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .page {
+      width: 90%;
+    }
+    .h2 {
+      font-size: 1.2em;
+    }
+    .h1 {
+      font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .page {
+      width: 100%;
+    }
+    .h2 {
+      font-size: 1em;
+    }
+    .h1 {
+      font-size: 1.5em;
+    }
+}
