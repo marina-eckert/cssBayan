@@ -81,7 +81,7 @@ to { opacity: 1 }
 
 @media screen and (max-width: 1920px) {
     .page {
-      width: 70%;
+      width: 50%;
     }
     .h2 {
       font-size: 1.4em;
