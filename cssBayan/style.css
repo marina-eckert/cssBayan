@@ -3,12 +3,13 @@
   }
 
 html {
+    scroll-behavior: smooth;
     background-color: #523634;
     color: #301b28;
 }
 
 .page {
-    max-width: 70%;
+    max-width: 50%;
     margin: 0 auto;
 }
 
@@ -17,6 +18,14 @@ html {
     text-align: center;
 }
 
+.icon {
+    width: 3%;
+    height: 3%;
+}
+
+.icon:hover {
+    display: block;
+}
 
 .accordion-item {
     border: 1px solid #ddc5a2;
@@ -29,13 +38,16 @@ html {
 
     cursor: pointer;
 
-    transition: background-color .2s
-    ease-out;
+    transition: background-color .2s ease-in-out;
 }
 
 .accordion-title:hover {
     background-color: #ddc5a2;
 }
+
+.accordion_title:hover .acc-icon{
+    rotate: 45deg;
+  }
 
 .accordion-input {
     width: 0;
@@ -45,8 +57,13 @@ html {
     position: absolute;
 }
 
-.accordion-input:checked + .content {
+.accordion-input:checked ~ .content {
     display: block;
+}
+
+.accordion-input:hover ~ .content {
+    display: block;
+    transition:0s .5s ease-in-out;
 }
 
 .content {
