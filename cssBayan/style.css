@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    background-color: #523634;
+    color: #301b28;
+}
+
+.page {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+.accordion-item {
+    border: 1px solid #ddc5a2;
+    width: 100%;
+}
+
+.accordion-title {
+    display: block;
+    padding: 0.1em 0.5em;
+
+    cursor: pointer;
+
+    transition: background-color .2s
+    ease-out;
+}
+
+.accordion-title:hover {
+    background-color: #ddc5a2;
+}
+
+.accordion-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+
+    position: absolute;
+}
+
+.accordion-input:checked + .content {
+    display: block;
+}
+
+.content {
+    width: 50%;
+    height: auto;
+    padding: 0.1em 0.5em;
+    display: none;
+}
